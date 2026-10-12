@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laung Laachi de Café | Good Food. Beautiful Moments. — Johar Town, Lahore</title>
+    <meta name="description" content="Welcome to Laung Laachi de Café located in Johar Town, Lahore. Enjoy authentic Karak Laung Laachi Chai, stuffed parathas, grilled sandwiches, loaded fries, and cold brews in a warm, cozy atmosphere.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            light: '#5A4032',
+                            DEFAULT: '#3C2A21',
+                            dark: '#2C1D11',
+                            deep: '#1A1009'
+                        },
+                        cream: {
+                            light: '#FFFFFF',
+                            DEFAULT: '#FDFBF7',
+                            soft: '#F5EFEB',
+                            muted: '#D8CFBE'
+                        },
+                        gold: {
+                            light: '#E6CA65',
+                            DEFAULT: '#D4AF37',
+                            dark: '#C5A059'
+                        },
+                        charcoal: {
+                            DEFAULT: '#1A1A1A',
+                            card: '#242424',
+                            border: '#333333'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #2C1D11;
+            color: #FDFBF7;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1A1009;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #5A4032;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF0BD 0%, #D4AF37 50%, #C5A059 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+        }
+
+        .glass-card {
+            background: rgba(60, 42, 33, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="selection:bg-gold selection:text-coffee-dark">
+
+    <!-- Concept Notice Top Banner -->
+    <div class="bg-coffee-deep border-b border-gold/20 text-[11px] text-cream-muted py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2">
+        <i class="fa-solid fa-leaf text-gold text-xs"></i>
+        <span>Proposed Website Concept for <strong>Laung Laachi de Café</strong>, Johar Town, Lahore. Independent web design preview.</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header id="main-header" class="fixed top-8 left-0 right-0 z-40 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#hero" class="group flex items-center gap-3 focus:outline-none">
+                <div class="w-10 h-10 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-coffee-dark transition-all duration-300 shadow-md">
+                    <i class="fa-solid fa-mug-hot text-lg"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-serif tracking-[0.18em] font-bold text-cream group-hover:text-gold transition-colors uppercase leading-tight">
+                        Laung Laachi
+                    </span>
+                    <span class="text-[9px] tracking-[0.35em] text-gold uppercase font-mono">
+                        de Café • Johar Town
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs tracking-[0.2em] font-medium uppercase text-cream-soft">
+                <a href="#hero" class="hover:text-gold transition-colors">Home</a>
+                <a href="#about" class="hover:text-gold transition-colors">About</a>
+                <a href="#menu" class="hover:text-gold transition-colors">Menu</a>
+                <a href="#gallery" class="hover:text-gold transition-colors">Gallery</a>
+                <a href="#contact" class="hover:text-gold transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- Action CTA -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:+923044632878" class="px-4 py-2 text-xs tracking-wider border border-gold/40 text-gold hover:bg-gold hover:text-coffee-dark transition-all duration-300 rounded-sm font-medium flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-xs"></i>
+                    <span>0304 4632878</span>
+                </a>
+                <a href="#enquiry" class="px-5 py-2 text-xs tracking-widest bg-gradient-to-r from-gold to-gold-dark text-coffee-deep font-semibold rounded-sm hover:brightness-110 transition-all uppercase shadow-lg shadow-gold/10">
+                    Table Enquiry
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-cream hover:text-gold focus:outline-none" aria-label="Toggle Mobile Navigation">
+                <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-coffee-deep/98 backdrop-blur-xl flex flex-col justify-between p-8 hidden transition-all duration-300">
+        <div class="flex items-center justify-between border-b border-gold/20 pb-6">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center text-gold">
+                    <i class="fa-solid fa-mug-hot text-base"></i>
+                </div>
+                <div>
+                    <span class="text-lg font-serif tracking-[0.15em] text-cream font-bold block uppercase">Laung Laachi</span>
+                    <span class="text-[9px] tracking-[0.3em] text-gold uppercase font-mono">de Café • Johar Town</span>
+                </div>
+            </div>
+            <button id="close-menu-btn" class="p-2 text-cream-muted hover:text-white">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+        </div>
+
+        <div class="flex flex-col space-y-6 text-center text-lg font-serif tracking-widest text-cream py-8">
+            <a href="#hero" class="mobile-nav-link hover:text-gold transition-colors">Home</a>
+            <a href="#about" class="mobile-nav-link hover:text-gold transition-colors">About Us</a>
+            <a href="#menu" class="mobile-nav-link hover:text-gold transition-colors">Our Menu</a>
+            <a href="#gallery" class="mobile-nav-link hover:text-gold transition-colors">Photo Gallery</a>
+            <a href="#contact" class="mobile-nav-link hover:text-gold transition-colors">Location & Contact</a>
+        </div>
+
+        <div class="flex flex-col gap-3 pt-6 border-t border-gold/20">
+            <a href="tel:+923044632878" class="w-full py-3 text-center border border-gold text-gold font-medium tracking-wider text-xs uppercase rounded-sm flex items-center justify-center gap-2">
+                <i class="fa-solid fa-phone"></i> Call 0304 4632878
+            </a>
+            <a href="#enquiry" class="mobile-nav-link w-full py-3 text-center bg-gold text-coffee-deep font-semibold tracking-wider text-xs uppercase rounded-sm">
+                Request Table Enquiry
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=2000&q=80" alt="Laung Laachi de Café Ambiance" class="w-full h-full object-cover object-center filter brightness-[0.25] scale-105 transform transition-transform duration-10000">
+            <div class="absolute inset-0 bg-gradient-to-t from-coffee-dark via-coffee-dark/70 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-coffee-deep/90 border border-gold/30 backdrop-blur-md mb-8 text-xs tracking-[0.2em] text-gold uppercase">
+                <i class="fa-solid fa-location-dot text-gold"></i>
+                <span>Johar Town, Lahore, Pakistan</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-normal text-cream tracking-tight leading-[1.15] mb-6">
+                Good Food. <br>
+                <span class="italic font-light gold-gradient-text">Beautiful Moments.</span>
+            </h1>
+
+            <p class="max-w-2xl text-sm sm:text-base md:text-lg text-cream-soft/90 font-light leading-relaxed mb-10 tracking-wide">
+                Discover delicious flavours, comforting favourites, and memorable moments at Laung Laachi de Café.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                <a href="#menu" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-gold to-gold-dark text-coffee-deep font-semibold text-xs tracking-[0.25em] uppercase rounded-sm hover:brightness-110 transition-all shadow-xl shadow-gold/15 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Explore Menu</span>
+                </a>
+
+                <a href="tel:+923044632878" class="w-full sm:w-auto px-8 py-4 border border-gold/40 bg-coffee-deep/80 hover:border-gold text-gold font-semibold text-xs tracking-[0.25em] uppercase rounded-sm transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call Now</span>
+                </a>
+
+                <a href="https://maps.app.goo.gl/YFpR3CDQbGywGuwj7?g_st=ac" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 border border-coffee-light/60 bg-transparent hover:border-gold text-cream font-medium text-xs tracking-[0.25em] uppercase rounded-sm transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-map-location-dot text-gold"></i>
+                    <span>Get Directions</span>
+                </a>
+            </div>
+
+            <!-- Highlights Banner -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-12 mt-16 pt-12 border-t border-gold/20 text-center w-full max-w-3xl">
+                <div>
+                    <p class="text-2xl sm:text-3xl font-serif text-gold">Johar Town</p>
+                    <p class="text-[11px] text-cream-muted uppercase tracking-widest mt-1">Prime Lahore Hub</p>
+                </div>
+                <div>
+                    <p class="text-2xl sm:text-3xl font-serif text-gold">Karak Chai</p>
+                    <p class="text-[11px] text-cream-muted uppercase tracking-widest mt-1">Laung & Cardamom</p>
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                    <p class="text-2xl sm:text-3xl font-serif text-gold">Cozy Vibes</p>
+                    <p class="text-[11px] text-cream-muted uppercase tracking-widest mt-1">Dine-In & Takeaway</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-coffee-deep border-t border-b border-gold/15 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Visual Column -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative rounded-sm overflow-hidden border border-gold/30 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1000&q=80" alt="Authentic Karak Chai" class="w-full h-[450px] object-cover filter brightness-90 hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="hidden sm:block absolute -bottom-8 -right-8 w-2/3 rounded-sm overflow-hidden border-2 border-gold/40 shadow-2xl bg-coffee-dark">
+                        <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80" alt="Crispy Wrap & Snacks" class="w-full h-[220px] object-cover">
+                    </div>
+                    <div class="absolute top-4 left-4 bg-coffee-deep/90 border border-gold/30 p-4 rounded-sm backdrop-blur-md">
+                        <i class="fa-solid fa-leaf text-gold text-lg mb-1"></i>
+                        <p class="text-xs font-serif text-cream tracking-wider uppercase">Authentic Spiced Brews</p>
+                    </div>
+                </div>
+
+                <!-- Text Content Column -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-xs font-mono text-gold tracking-[0.3em] uppercase">
+                        <span class="w-8 h-[1px] bg-gold"></span>
+                        <span>Welcome To Our Cafe</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-5xl font-serif text-cream leading-tight">
+                        A Warm Sanctuary In <span class="italic text-gold">Johar Town</span>
+                    </h2>
+
+                    <p class="text-cream-muted text-sm sm:text-base leading-relaxed font-light">
+                        Located in the bustling heart of Johar Town, Lahore, <strong>Laung Laachi de Café</strong> is a welcoming space crafted for those who appreciate authentic Desi tea culture, comforting hot snacks, and delicious modern cafe fare.
+                    </p>
+
+                    <p class="text-cream-muted text-sm sm:text-base leading-relaxed font-light">
+                        From our signature Karak Laung Laachi Chai infused with natural cloves and cardamom to stuffed golden parathas, grilled sandwiches, and loaded fries, every item is prepared fresh with love.
+                    </p>
+
+                    <div class="pt-4 grid grid-cols-2 gap-6 border-t border-gold/15">
+                        <div>
+                            <h4 class="text-xs font-mono uppercase tracking-widest text-gold mb-1">Neighborhood</h4>
+                            <p class="text-xs text-cream-muted">Johar Town, Lahore, Punjab</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-mono uppercase tracking-widest text-gold mb-1">Our Specialties</h4>
+                            <p class="text-xs text-cream-muted">Karak Chai, Stuffed Parathas, Fast Food & Coffee</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="#menu" class="inline-flex items-center gap-2 text-xs font-medium tracking-[0.2em] text-gold hover:text-white uppercase transition-colors">
+                            <span>Browse Our Menu</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Section -->
+    <section id="menu" class="py-24 bg-coffee-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-mono text-gold tracking-[0.3em] uppercase block mb-2">Taste The Traditions</span>
+                <h2 class="text-3xl sm:text-5xl font-serif text-cream mb-4">Our Interactive Menu</h2>
+                <p class="text-cream-muted text-sm font-light leading-relaxed">
+                    Explore our dishes with pricing in PKR. Filter by category or search directly for your favorite items.
+                </p>
+            </div>
+
+            <!-- Search & Filters -->
+            <div class="space-y-6 mb-12">
+                <div class="max-w-md mx-auto relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-cream-muted text-xs"></i>
+                    <input type="text" id="menu-search-input" placeholder="Search menu (e.g. Chai, Paratha, Wrap, Latte)..." class="w-full bg-coffee-deep border border-gold/20 rounded-sm py-3 pl-10 pr-4 text-xs text-cream placeholder-cream-muted/60 focus:outline-none focus:border-gold transition-all">
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="flex items-center gap-2 overflow-x-auto pb-4 justify-start md:justify-center border-b border-gold/15" id="category-filter-container">
+                    <!-- Dynamic tabs rendered via JS -->
+                </div>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menu-items-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Injected via JavaScript -->
+            </div>
+
+            <!-- Menu Callout -->
+            <div class="mt-16 bg-gradient-to-r from-coffee-deep via-coffee to-coffee-deep border border-gold/25 rounded-sm p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <div>
+                    <span class="text-[10px] font-mono uppercase tracking-[0.2em] text-gold block mb-1">Direct Orders & Inquiries</span>
+                    <h4 class="text-xl font-serif text-cream">Want to place a direct phone order?</h4>
+                    <p class="text-xs text-cream-muted mt-1">Call our Johar Town branch directly for takeaway or dine-in reservations.</p>
+                </div>
+                <a href="tel:+923044632878" class="px-6 py-3 bg-gold text-coffee-deep text-xs uppercase tracking-widest font-semibold rounded-sm hover:brightness-110 transition-all flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call 0304 4632878</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Food & Cafe Gallery -->
+    <section id="gallery" class="py-24 bg-coffee-deep border-t border-b border-gold/15 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-xs font-mono text-gold tracking-[0.3em] uppercase block mb-2">Visual Moments</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif text-cream">Cafe Photo Gallery</h2>
+                </div>
+
+                <!-- Gallery Category Filters -->
+                <div class="flex items-center gap-2 overflow-x-auto pb-2" id="gallery-filter-container">
+                    <button data-gallery-cat="all" class="gallery-cat-btn active px-3 py-1.5 text-[11px] font-mono uppercase rounded-sm bg-gold text-coffee-deep font-semibold">All Photos</button>
+                    <button data-gallery-cat="chai" class="gallery-cat-btn px-3 py-1.5 text-[11px] font-mono uppercase rounded-sm bg-coffee-dark text-cream-muted hover:text-white border border-gold/20">Chai & Coffee</button>
+                    <button data-gallery-cat="food" class="gallery-cat-btn px-3 py-1.5 text-[11px] font-mono uppercase rounded-sm bg-coffee-dark text-cream-muted hover:text-white border border-gold/20">Parathas & Food</button>
+                    <button data-gallery-cat="ambience" class="gallery-cat-btn px-3 py-1.5 text-[11px] font-mono uppercase rounded-sm bg-coffee-dark text-cream-muted hover:text-white border border-gold/20">Ambience</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Injected via JavaScript -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Table Enquiry Form Section -->
+    <section id="enquiry" class="py-24 bg-coffee-dark relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="bg-coffee-deep border border-gold/30 rounded-sm p-8 sm:p-12 relative shadow-2xl overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-xs font-mono text-gold tracking-[0.3em] uppercase block mb-2">Plan Your Visit</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif text-cream">Table & Event Enquiry</h2>
+                    <p class="text-xs sm:text-sm text-cream-muted mt-2 font-light">
+                        Planning a group gathering or tea party at Laung Laachi de Café? Submit your enquiry below.
+                    </p>
+                </div>
+
+                <form id="enquiry-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        
+                        <div>
+                            <label class="block text-xs font-mono uppercase tracking-wider text-gold mb-2">Full Name *</label>
+                            <input type="text" id="enq-name" required placeholder="e.g. Hammad Raza" class="w-full bg-coffee-dark border border-gold/20 rounded-sm p-3 text-xs text-cream focus:outline-none focus:border-gold">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono uppercase tracking-wider text-gold mb-2">Phone Number *</label>
+                            <input type="tel" id="enq-phone" required placeholder="0304 0000000" class="w-full bg-coffee-dark border border-gold/20 rounded-sm p-3 text-xs text-cream focus:outline-none focus:border-gold">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono uppercase tracking-wider text-gold mb-2">Preferred Date *</label>
+                            <input type="date" id="enq-date" required class="w-full bg-coffee-dark border border-gold/20 rounded-sm p-3 text-xs text-cream focus:outline-none focus:border-gold">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono uppercase tracking-wider text-gold mb-2">Preferred Time</label>
+                            <select id="enq-time" class="w-full bg-coffee-dark border border-gold/20 rounded-sm p-3 text-xs text-cream focus:outline-none focus:border-gold">
+                                <option value="04:00 PM">04:00 PM (Evening Chai)</option>
+                                <option value="06:00 PM">06:00 PM (Evening Tea)</option>
+                                <option value="08:00 PM" selected>08:00 PM (Dinner & Snacks)</option>
+                                <option value="10:00 PM">10:00 PM (Late Night Tea)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono uppercase tracking-wider text-gold mb-2">Number of Guests</label>
+                            <select id="enq-guests" class="w-full bg-coffee-dark border border-gold/20 rounded-sm p-3 text-xs text-cream focus:outline-none focus:border-gold">
+                                <option value="1-2 Persons">1-2 Persons</option>
+                                <option value="3-4 Persons" selected>3-4 Persons</option>
+                                <option value="5-8 Group">5-8 Group</option>
+                                <option value="9+ Party">9+ Party</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono uppercase tracking-wider text-gold mb-2">Special Request</label>
+                            <input type="text" id="enq-message" placeholder="e.g. Outdoor seating, birthday setup" class="w-full bg-coffee-dark border border-gold/20 rounded-sm p-3 text-xs text-cream focus:outline-none focus:border-gold">
+                        </div>
+
+                    </div>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gold/20">
+                        <p class="text-[11px] text-cream-muted font-light">
+                            * Note: For immediate table availability, please call 0304 4632878 directly.
+                        </p>
+                        <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-gold to-gold-dark text-coffee-deep font-semibold text-xs tracking-[0.2em] uppercase rounded-sm hover:brightness-110 transition-all shadow-lg shadow-gold/10">
+                            Submit Table Enquiry
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="contact" class="py-24 bg-coffee-deep border-t border-gold/15 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-xs font-mono text-gold tracking-[0.3em] uppercase block mb-2">Find Us In Johar Town</span>
+                        <h2 class="text-3xl sm:text-4xl font-serif text-cream">Location & Helpline</h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 bg-coffee-dark border border-gold/20 rounded-sm">
+                            <i class="fa-solid fa-location-dot text-gold text-lg mt-1"></i>
+                            <div>
+                                <h4 class="text-xs font-mono text-gold uppercase tracking-wider mb-1">Branch Address</h4>
+                                <p class="text-sm text-cream">Johar Town, Lahore, Punjab, Pakistan</p>
+                                <a href="https://maps.app.goo.gl/YFpR3CDQbGywGuwj7?g_st=ac" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-gold hover:underline mt-2 font-mono uppercase tracking-wide">
+                                    <span>Get Directions on Google Maps</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-coffee-dark border border-gold/20 rounded-sm">
+                            <i class="fa-solid fa-phone text-gold text-lg mt-1"></i>
+                            <div>
+                                <h4 class="text-xs font-mono text-gold uppercase tracking-wider mb-1">Telephone Helpline</h4>
+                                <p class="text-sm text-cream">0304 4632878</p>
+                                <a href="tel:+923044632878" class="inline-flex items-center gap-1.5 text-xs text-gold hover:underline mt-2 font-mono uppercase tracking-wide">
+                                    <span>Click to Call Directly</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="tel:+923044632878" class="flex-1 py-4 bg-gradient-to-r from-gold to-gold-dark text-coffee-deep font-semibold text-xs uppercase tracking-[0.2em] rounded-sm hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-gold/10">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call 0304 4632878</span>
+                        </a>
+                        <a href="https://maps.app.goo.gl/YFpR3CDQbGywGuwj7?g_st=ac" target="_blank" rel="noopener noreferrer" class="flex-1 py-4 border border-gold/30 bg-coffee-dark text-cream hover:border-gold text-xs font-mono uppercase tracking-wider rounded-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-compass text-gold"></i>
+                            <span>Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Visual Location Map Container -->
+                <div class="lg:col-span-7">
+                    <div class="relative rounded-sm overflow-hidden border border-gold/30 bg-coffee-dark h-[420px] shadow-2xl flex flex-col justify-between p-6">
+                        
+                        <div class="relative z-10 flex justify-between items-start">
+                            <div class="bg-coffee-deep/90 backdrop-blur-md border border-gold/30 p-4 rounded-sm">
+                                <span class="text-xs font-serif text-cream block font-bold">LAUNG LAACHI DE CAFÉ</span>
+                                <span class="text-[10px] text-gold font-mono block">Johar Town • Lahore</span>
+                            </div>
+                            <a href="https://maps.app.goo.gl/YFpR3CDQbGywGuwj7?g_st=ac" target="_blank" rel="noopener noreferrer" class="p-3 bg-gold text-coffee-deep rounded-sm hover:brightness-110 transition-all shadow-lg">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+
+                        <div class="absolute inset-0 z-0">
+                            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80" alt="Map Graphic" class="w-full h-full object-cover filter brightness-[0.3] contrast-125">
+                            <div class="absolute inset-0 bg-gradient-to-t from-coffee-dark via-transparent to-coffee-dark/80"></div>
+                            
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                                <div class="w-12 h-12 rounded-full bg-gold text-coffee-deep flex items-center justify-center shadow-2xl animate-bounce">
+                                    <i class="fa-solid fa-mug-hot text-lg"></i>
+                                </div>
+                                <span class="bg-coffee-deep text-gold text-[10px] font-mono px-3 py-1 rounded-sm border border-gold/40 mt-2 shadow-xl">
+                                    Laung Laachi Here
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="relative z-10 bg-coffee-deep/90 backdrop-blur-md border border-gold/20 p-4 rounded-sm text-xs text-cream-muted flex flex-col sm:flex-row justify-between items-center gap-3">
+                            <span>Located in Johar Town, Lahore.</span>
+                            <a href="https://maps.app.goo.gl/YFpR3CDQbGywGuwj7?g_st=ac" target="_blank" rel="noopener noreferrer" class="text-gold font-mono text-[11px] uppercase tracking-wider hover:underline shrink-0">
+                                View Directions →
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Dish Modal Popup -->
+    <div id="dish-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
+        <div class="bg-coffee-deep border border-gold/30 rounded-sm max-w-lg w-full overflow-hidden shadow-2xl relative animate-fade-in">
+            <button id="close-dish-modal" class="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/60 text-white hover:text-gold">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="dish-modal-body">
+                <!-- Content injected dynamically via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 hidden">
+        <div class="relative max-w-4xl w-full text-center">
+            <button id="close-lightbox" class="absolute -top-10 right-0 text-white hover:text-gold text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="Full preview photo" class="w-full max-h-[80vh] object-contain rounded-sm border border-gold/30">
+            <div class="mt-4">
+                <h4 id="lightbox-title" class="text-xl font-serif text-cream"></h4>
+                <p id="lightbox-desc" class="text-xs text-cream-muted font-light mt-1"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enquiry Feedback Confirmation Modal -->
+    <div id="enq-success-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
+        <div class="bg-coffee-deep border border-gold/40 p-8 rounded-sm text-center max-w-lg w-full shadow-2xl animate-fade-in">
+            <i class="fa-solid fa-circle-check text-gold text-5xl mb-4"></i>
+            <h3 class="text-2xl font-serif text-cream mb-2">Enquiry Request Sent</h3>
+            <p id="enq-success-text" class="text-xs text-cream-muted leading-relaxed mb-6 font-light">
+                Thank you. We have registered your enquiry request. Our staff will contact you shortly regarding seating availability.
+            </p>
+            <button id="close-enq-modal" class="px-6 py-2.5 bg-gold text-coffee-deep font-semibold text-xs uppercase tracking-wider rounded-sm hover:brightness-110">
+                Close Confirmation
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-coffee-deep border-t border-gold/15 pt-16 pb-12 text-xs text-cream-muted">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-gold/15">
+                
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold">
+                            <i class="fa-solid fa-mug-hot text-xs"></i>
+                        </div>
+                        <div>
+                            <span class="text-lg font-serif tracking-[0.2em] font-bold text-cream uppercase block">
+                                LAUNG LAACHI DE CAFÉ
+                            </span>
+                            <span class="text-[9px] tracking-[0.3em] text-gold uppercase font-mono block">
+                                JOHAR TOWN • LAHORE
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-cream-muted leading-relaxed max-w-sm font-light">
+                        Authentic Karak Laung Laachi Chai, stuffed parathas, grilled sandwiches, crisp loaded fries, and refreshing cold beverages in Johar Town, Lahore.
+                    </p>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="text-xs font-mono uppercase tracking-widest text-gold">Quick Links</h4>
+                    <ul class="space-y-2 text-[11px] uppercase tracking-wider font-mono">
+                        <li><a href="#hero" class="hover:text-gold">Home</a></li>
+                        <li><a href="#about" class="hover:text-gold">About Us</a></li>
+                        <li><a href="#menu" class="hover:text-gold">Interactive Menu</a></li>
+                        <li><a href="#gallery" class="hover:text-gold">Photo Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-gold">Contact & Map</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="text-xs font-mono uppercase tracking-widest text-gold">Branch Details</h4>
+                    <p class="text-xs text-cream">Johar Town, Lahore, Punjab, Pakistan</p>
+                    <p class="text-xs text-gold font-mono">Phone: 0304 4632878</p>
+                    <div class="pt-2">
+                        <a href="https://maps.app.goo.gl/YFpR3CDQbGywGuwj7?g_st=ac" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 border border-gold/30 hover:border-gold text-[10px] uppercase font-mono text-gold rounded-sm transition-all inline-block">
+                            Google Maps Location
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-cream-muted/60">
+                <p>© 2026 Laung Laachi de Café Lahore. Proposed Web Concept.</p>
+                <a href="#hero" class="flex items-center gap-1.5 text-gold hover:underline uppercase text-[10px]">
+                    <span>Back to top</span>
+                    <i class="fa-solid fa-chevron-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vanilla JavaScript Interactivity -->
+    <script>
+        // Menu Dataset
+        const categories = [
+            { id: 'all', name: 'All Items' },
+            { id: 'tea', name: 'Tea & Coffee' },
+            { id: 'parathas', name: 'Parathas & Breakfast' },
+            { id: 'sandwiches', name: 'Sandwiches & Wraps' },
+            { id: 'burgers', name: 'Burgers & Snacks' },
+            { id: 'desserts', name: 'Desserts & Beverages' }
+        ];
+
+        const menuItems = [
+            { id: 'm1', name: 'Karak Laung Laachi Chai', category: 'tea', price: 180, description: 'Our signature slow-boiled milk tea infused with aromatic cloves (laung) and cardamom (laachi).', image: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80', tag: 'Signature' },
+            { id: 'm2', name: 'Classic Doodh Patti', category: 'tea', price: 160, description: 'Rich full-cream milk boiled with black tea leaves and pure cane sugar for maximum warmth.', image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80', tag: 'Traditional' },
+            { id: 'm3', name: 'Special Gurr Chai', category: 'tea', price: 200, description: 'Traditional jaggery (gurr) tea boiled with crushed cardamom and ginger.', image: 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=800&q=80', tag: 'Special' },
+            { id: 'm4', name: 'Aloo Cheese Paratha', category: 'parathas', price: 350, description: 'Crispy flaky paratha stuffed with spiced mashed potatoes and melted cheddar mozzarella cheese.', image: 'https://images.unsplash.com/photo-1626776876729-bab4fe60a21c?auto=format&fit=crop&w=800&q=80', tag: 'Bestseller' },
+            { id: 'm5', name: 'Chicken Cheese Paratha', category: 'parathas', price: 420, description: 'Golden hand-rolled paratha loaded with shredded tandoori chicken and gooey cheese.', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80', tag: 'Popular' },
+            { id: 'm6', name: 'Nutella Sweet Paratha', category: 'parathas', price: 380, description: 'Sweet crispy paratha slathered inside with warm Nutella chocolate spread.', image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=800&q=80', tag: 'Sweet' },
+            { id: 'm7', name: 'Grilled Chicken Club Sandwich', category: 'sandwiches', price: 580, description: 'Triple-decker toasted sandwich filled with grilled chicken, fried egg, cheese, lettuce, and mayo.', image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80', tag: 'Classic' },
+            { id: 'm8', name: 'BBQ Crispy Chicken Wrap', category: 'sandwiches', price: 520, description: 'Crispy fried chicken strips wrapped in a soft tortilla with BBQ glaze and garlic dip.', image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=80', tag: 'Snack' },
+            { id: 'm9', name: 'Special Zinger Burger', category: 'burgers', price: 550, description: 'Crispy fried chicken breast fillet with chili mayo, pickle slice, and iceberg lettuce in a brioche bun.', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80', tag: 'Popular' },
+            { id: 'm10', name: 'Cheesy Loaded Fries', category: 'burgers', price: 480, description: 'Crisp golden fries covered in liquid cheddar cheese, jalapenos, and spicy chicken chunks.', image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=800&q=80', tag: 'Must Try' },
+            { id: 'm11', name: 'Spanish Iced Cold Coffee', category: 'desserts', price: 450, description: 'Chilled double shot espresso shaken over ice, cream, and sweetened condensed milk.', image: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80', tag: 'Chilled' },
+            { id: 'm12', name: 'Mint Margarita Mocktail', category: 'desserts', price: 350, description: 'Fresh crushed mint leaves blended with lemon juice, ice, and fizzy soda.', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80', tag: 'Refreshing' }
+        ];
+
+        // Gallery Dataset
+        const galleryItems = [
+            { id: 'g1', category: 'chai', title: 'Karak Laung Laachi Chai', url: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1200&q=80', desc: 'Boiled to perfection with spiced cardamom & cloves.' },
+            { id: 'g2', category: 'food', title: 'Stuffed Golden Paratha', url: 'https://images.unsplash.com/photo-1626776876729-bab4fe60a21c?auto=format&fit=crop&w=1200&q=80', desc: 'Flaky paratha served fresh off the tawa.' },
+            { id: 'g3', category: 'ambience', title: 'Johar Town Cafe Seating', url: 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=1200&q=80', desc: 'Warm ambiance at Laung Laachi de Café.' },
+            { id: 'g4', category: 'food', title: 'Crispy Grilled Wrap & Dip', url: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=1200&q=80', desc: 'Served with signature house sauce.' },
+            { id: 'g5', category: 'chai', title: 'Spanish Cold Brew Coffee', url: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=1200&q=80', desc: 'Espresso shaken with ice and condensed milk.' },
+            { id: 'g6', category: 'ambience', title: 'Evening Cafe Lights', url: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80', desc: 'Cozy night hangout spot in Lahore.' }
+        ];
+
+        let activeCategory = 'all';
+        let searchQuery = '';
+
+        // DOM Elements
+        const header = document.getElementById('main-header');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const categoryFilterContainer = document.getElementById('category-filter-container');
+        const menuItemsGrid = document.getElementById('menu-items-grid');
+        const menuSearchInput = document.getElementById('menu-search-input');
+        const dishModal = document.getElementById('dish-modal');
+        const dishModalBody = document.getElementById('dish-modal-body');
+        const closeDishModal = document.getElementById('close-dish-modal');
+        const galleryGrid = document.getElementById('gallery-grid');
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxDesc = document.getElementById('lightbox-desc');
+        const closeLightbox = document.getElementById('close-lightbox');
+        const enquiryForm = document.getElementById('enquiry-form');
+        const enqSuccessModal = document.getElementById('enq-success-modal');
+        const enqSuccessText = document.getElementById('enq-success-text');
+        const closeEnqModal = document.getElementById('close-enq-modal');
+
+        // Scroll listener for sticky header background
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                header.classList.add('bg-coffee-deep/95', 'backdrop-blur-md', 'border-b', 'border-gold/20', 'shadow-2xl', 'py-3');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('bg-coffee-deep/95', 'backdrop-blur-md', 'border-b', 'border-gold/20', 'shadow-2xl', 'py-3');
+                header.classList.add('py-4');
+            }
+        });
+
+        // Mobile Menu Controls
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+        closeMenuBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Render Category Filter Buttons
+        function renderCategories() {
+            categoryFilterContainer.innerHTML = categories.map(cat => `
+                <button 
+                    onclick="setCategory('${cat.id}')"
+                    class="px-4 py-2 text-xs font-medium tracking-wider uppercase whitespace-nowrap rounded-sm transition-all duration-300 ${activeCategory === cat.id ? 'bg-gold text-coffee-deep font-semibold' : 'bg-coffee-deep text-cream-muted hover:text-white border border-gold/20'}"
+                >
+                    ${cat.name}
+                </button>
+            `).join('');
+        }
+
+        function setCategory(catId) {
+            activeCategory = catId;
+            renderCategories();
+            renderMenuItems();
+        }
+
+        // Render Menu Cards
+        function renderMenuItems() {
+            const filtered = menuItems.filter(item => {
+                const matchesCat = activeCategory === 'all' || item.category === activeCategory;
+                const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || item.description.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                menuItemsGrid.innerHTML = `
+                    <div class="col-span-full text-center py-12 border border-dashed border-gold/20 rounded-sm">
+                        <p class="text-cream-muted text-xs">No menu items match your search filter.</p>
+                        <button onclick="resetMenuFilters()" class="mt-3 px-4 py-1.5 bg-coffee-deep text-gold border border-gold/30 text-xs uppercase tracking-wider rounded-sm">
+                            Reset Filters
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            menuItemsGrid.innerHTML = filtered.map(item => `
+                <div 
+                    onclick="openDishModal('${item.id}')"
+                    class="group bg-coffee-deep border border-gold/20 rounded-sm overflow-hidden hover:border-gold/50 transition-all duration-300 cursor-pointer flex flex-col justify-between"
+                >
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-coffee-dark">
+                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95">
+                            <span class="absolute top-3 left-3 bg-coffee-deep/80 border border-gold/30 text-gold text-[10px] font-mono px-2 py-0.5 rounded-sm backdrop-blur-sm uppercase">
+                                ${item.tag}
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-start justify-between gap-2 mb-2">
+                                <h3 class="text-lg font-serif text-cream group-hover:text-gold transition-colors leading-snug">${item.name}</h3>
+                                <span class="text-xs font-mono font-semibold text-gold shrink-0">PKR ${item.price}</span>
+                            </div>
+                            <p class="text-xs text-cream-muted line-clamp-2 leading-relaxed font-light">${item.description}</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-4 pt-2 flex items-center justify-between border-t border-gold/10 text-[11px] text-gold font-mono uppercase tracking-wider">
+                        <span>View Details</span>
+                        <i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        menuSearchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderMenuItems();
+        });
+
+        function resetMenuFilters() {
+            activeCategory = 'all';
+            searchQuery = '';
+            menuSearchInput.value = '';
+            renderCategories();
+            renderMenuItems();
+        }
+
+        // Dish Detail Modal
+        function openDishModal(id) {
+            const dish = menuItems.find(m => m.id === id);
+            if (!dish) return;
+
+            dishModalBody.innerHTML = `
+                <div class="h-60 relative overflow-hidden bg-coffee-dark">
+                    <img src="${dish.image}" alt="${dish.name}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-coffee-deep via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between gap-4 mb-2">
+                        <span class="text-[10px] font-mono text-gold uppercase tracking-widest bg-coffee-dark px-2.5 py-1 rounded-sm border border-gold/20">
+                            ${dish.category}
+                        </span>
+                        <span class="text-base font-mono font-semibold text-gold">PKR ${dish.price}</span>
+                    </div>
+                    <h3 class="text-2xl font-serif text-cream mb-3">${dish.name}</h3>
+                    <p class="text-xs text-cream-muted leading-relaxed font-light mb-6">${dish.description}</p>
+                    <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gold/20">
+                        <a href="tel:+923044632878" class="flex-1 py-3 bg-gold text-coffee-deep font-semibold text-xs uppercase tracking-wider rounded-sm text-center hover:brightness-110 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call to Order (0304 4632878)</span>
+                        </a>
+                    </div>
+                </div>
+            `;
+            dishModal.classList.remove('hidden');
+        }
+
+        function closeDishModalFunc() {
+            dishModal.classList.add('hidden');
+        }
+        closeDishModal.addEventListener('click', closeDishModalFunc);
+
+        // Render Gallery
+        function renderGallery(cat = 'all') {
+            const filtered = cat === 'all' ? galleryItems : galleryItems.filter(g => g.category === cat);
+            galleryGrid.innerHTML = filtered.map(item => `
+                <div 
+                    onclick="openLightbox('${item.url}', '${item.title}', '${item.desc}')"
+                    class="group relative h-72 rounded-sm overflow-hidden border border-gold/20 cursor-pointer bg-coffee-dark"
+                >
+                    <img src="${item.url}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 filter brightness-90">
+                    <div class="absolute inset-0 bg-gradient-to-t from-coffee-deep via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] font-mono text-gold uppercase tracking-widest block mb-1">${item.category}</span>
+                        <h4 class="text-base font-serif text-cream">${item.title}</h4>
+                        <p class="text-xs text-cream-muted font-light mt-1">${item.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        document.querySelectorAll('.gallery-cat-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.gallery-cat-btn').forEach(b => {
+                    b.classList.remove('bg-gold', 'text-coffee-deep', 'font-semibold');
+                    b.classList.add('bg-coffee-dark', 'text-cream-muted');
+                });
+                e.target.classList.remove('bg-coffee-dark', 'text-cream-muted');
+                e.target.classList.add('bg-gold', 'text-coffee-deep', 'font-semibold');
+                renderGallery(e.target.getAttribute('data-gallery-cat'));
+            });
+        });
+
+        function openLightbox(url, title, desc) {
+            lightboxImg.src = url;
+            lightboxTitle.innerText = title;
+            lightboxDesc.innerText = desc;
+            lightboxModal.classList.remove('hidden');
+        }
+        closeLightbox.addEventListener('click', () => lightboxModal.classList.add('hidden'));
+
+        // Enquiry Form Handler
+        enquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('enq-name').value;
+            const phone = document.getElementById('enq-phone').value;
+            const date = document.getElementById('enq-date').value || 'Requested Date';
+            const time = document.getElementById('enq-time').value;
+            const guests = document.getElementById('enq-guests').value;
+
+            enqSuccessText.innerHTML = `
+                Thank you, <strong>${name}</strong>. We recorded your enquiry for <strong>${guests}</strong> on <strong>${date}</strong> at <strong>${time}</strong>.
+                <br><br>Our team will contact <strong>${phone}</strong> shortly. For instant confirmation, please call <strong>0304 4632878</strong> directly.
+            `;
+            enqSuccessModal.classList.remove('hidden');
+            enquiryForm.reset();
+        });
+
+        closeEnqModal.addEventListener('click', () => enqSuccessModal.classList.add('hidden'));
+
+        // Initial Inits
+        renderCategories();
+        renderMenuItems();
+        renderGallery();
+    </script>
+</body>
+</html>
